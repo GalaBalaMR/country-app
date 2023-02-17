@@ -1,9 +1,9 @@
 import { countryAction } from "./country-slice";
 
-export const fetchCountries = () => {
+export const fetchCountries = (page) => {
     return async (dispatch) => {
         const fetchData = async () => {
-            const response = await fetch("http://localhost:8000/api/countries");
+            const response = await fetch("http://localhost:8000/api/countries?page="+page);
 
             if (!response.ok) {
                 throw new Error("Nemôžem zobraziť produkty!..");
@@ -18,7 +18,7 @@ export const fetchCountries = () => {
 
             dispatch(
                 countryAction.addCountry({
-                    countries: fetchedData.countries || [],
+                    // countries: fetchedData.countries.data || [],
                     continents: fetchedData.continents || []
                 })
             );

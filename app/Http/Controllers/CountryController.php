@@ -17,7 +17,7 @@ class CountryController extends Controller
      */
     public function index(Response $response)
     {
-        $countries = Country::all();
+        $countries = Country::paginate(10);
         $continents = Continent::all();
         // add continent to eloquent
         foreach($countries as $country){
