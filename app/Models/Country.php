@@ -10,9 +10,11 @@ class Country extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $primaryKey = 'country_id';
 
-    protected $fillable = ['name', 'full_name', 'iso3', 'number', 'continent_code', 'display_order'];
+    protected $fillable = ['code', 'name', 'full_name', 'iso3', 'number', 'continent_code', 'display_order'];
 
     public function continent()
     {

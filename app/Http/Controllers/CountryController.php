@@ -44,17 +44,19 @@ class CountryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CountryRequest $request)
+    public function store(Request $request)
     {
-        $request->validated();
+        
 
         Country::create([
             'code' => $request->code,
             'name' => $request->name,
             'full_name' => $request->full_name,
-            'iso-3' => $request->iso_3,
+            'iso3' => $request->iso3,
             'number' => $request->number,
             'continent_code' => $request->continent_code,
+            // 'updated_at' => now(),
+
         ]);
     }
 

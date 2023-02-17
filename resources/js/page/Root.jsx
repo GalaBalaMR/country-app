@@ -8,7 +8,6 @@ import Header from './Header'
 
 
 const Root = () => {
-  const [ initialState, setInitialState ] = useState(true);
   // const [ page, setPage ] = useState(1);
   const dispatch = useDispatch();
   
@@ -22,7 +21,6 @@ const Root = () => {
 
   return (
     <div className='container'>
-        <button > +</button>
         <Header />
         <main className='text-center'><Outlet /></main>
     </div>

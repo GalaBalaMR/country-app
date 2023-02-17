@@ -20,5 +20,9 @@ Route::get('/', function () {
 Route::get('/countries', function () {
     return view('welcome');
 });
+Route::get('/countries/add', function () {
+    return view('welcome');
+});
 
 Route::get('api/countries', [CountryController::class, 'index']);
+Route::post('api/countries/store', [CountryController::class, 'store']);

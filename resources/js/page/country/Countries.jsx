@@ -115,6 +115,7 @@ const Countries = () => {
 
     return (
         <div className={classes}>
+            <Link to="/countries/add" className="btn btn-warning rounded-pill m-auto mt-2">New Country</Link>
             <div className="d-flex justify-content-around align-items-center my-5">
                 <button className="btn btn-warning h-50" onClick={sortAZ}>
                     Sort A-Z

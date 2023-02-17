@@ -7,6 +7,7 @@ import Home from "../page/Home";
 import CountryRoot from "../page/country/CountryRoot";
 import Countries from "../page/country/Countries";
 import CountryDetail from "../page/country/CountryDetail";
+import AddCountry from "../page/country/AddCountry";
 
 
 const Router = () => {
@@ -17,7 +18,8 @@ const Router = () => {
               { index: true, element: <Home />},
               { path: "countries", element: <CountryRoot />, children: [
                 {index: true, element: <Countries />},
-                { path: ":countryId" , element: <CountryDetail />}
+                { path: ":countryId" , element: <CountryDetail />},
+                { path: "add" , element: <AddCountry />},
               ]},
           ],  
   
