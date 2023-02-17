@@ -1,0 +1,18 @@
+a{
+    color: rgb(255, 153, 0);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    
+}
+
+h4{
+    color: rgb(255, 153, 0);
+    
+
+}
+
+.active{
+    color: rgb(248, 119, 6);
+    font-size: 1.2rem;
+}
